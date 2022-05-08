@@ -30,7 +30,7 @@ Array(400).fill().forEach(addStar);
 
 const earTxt = new THREE.TextureLoader().load('../img/earth.jpg');
 const earNor = new THREE.TextureLoader().load('../normal/earthNorm.jpg');
-const earthGeo = new THREE.SphereGeometry(10,35,35);
+const earthGeo = new THREE.SphereGeometry(7,20,20);
 const earthMat = new THREE.MeshStandardMaterial( {map: earTxt, normalMap: earNor} );
 const earth = new THREE.Mesh( earthGeo, earthMat);
 earth.position.setZ(-20);
