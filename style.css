@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    user-select: none;
+    transition: .2s;
+}
+
+::selection {
+    color: #a0a0a0;
+    background: #0e1111;
+  }
+
+:root{
+    --background-color: rgb(175, 175, 175);
+    --font-color: #0e1111;
+    --nav-background-color: #232b2b;
+    --nav-color: #fff ;
+    --nav-shadow-color: #070606;
+    --sunmoon: var(rgba(0,0,0,0));
+    --sunmoon: var(--nav-background-color);
+    --sunmoon-color: rgb(224, 224, 100);
+    --blackjack-color: gray;
+    --blackjack-h3: rgb(59, 58, 58);
+    --blackjack-status: #000;
+    --player-background: #abb8bb;
+    --player-background-active: #95e3f8;
+    --blackjack-button: rgb(202, 200, 200);
+    --blackjack-button-hover: rgb(89, 90, 90);
+    --blackjack-button-text: rgb(0, 0, 0);
+    --game-footer-text: rgb(41, 35, 35);
+}
+
+html[data-theme='light']{
+    --background-color: rgb(175, 175, 175);
+    --font-color: #0e1111;
+    --nav-background-color: #232b2b;
+    --nav-color: #fff ;
+    --nav-shadow-color: #070606;
+    --sunmoon: var(rgba(0,0,0,0));
+    --sunmoon: var(--nav-background-color);
+    --sunmoon-color: rgb(224, 224, 100);
+    --blackjack-color: gray;
+    --blackjack-h3: rgb(59, 58, 58);
+    --blackjack-status: #000;
+    --player-background: #abb8bb;
+    --player-background-active: #95e3f8;
+    --blackjack-button: rgb(202, 200, 200);
+    --blackjack-button-hover: rgb(89, 90, 90);
+    --blackjack-button-text: rgb(0, 0, 0);
+    --game-footer-text: rgb(41, 35, 35);
+}
+
+html[data-theme='dark']{
+    --background-color: #232b2b;
+    --font-color: #fff;
+    --nav-background-color: #0e1111;
+    --nav-color: #fff ;
+    --nav-shadow-color: #0e1111;
+    --sunmoon: var(--nav-background-color);
+    --sunmoon-color: rgb(199, 199, 199);
+    --blackjack-color: #414a4c;
+    --blackjack-h3: #202424;
+    --blackjack-status: #fff;
+    --player-background: #b8c8cc;
+    --player-background-active: #06b9eb;
+    --blackjack-button: #222;
+    --blackjack-button-hover: rgb(89, 90, 90);
+    --blackjack-button-text: #fff;
+    --game-footer-text: rgb(128, 128, 128);
+}
+
+body{
+    margin: 4.1rem 0 0 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--font-color);
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4rem;
+    background-color: var(--nav-background-color);
+    box-shadow: 0 0 10px 0 var(--nav-shadow-color);
+    display: flex;
+    align-items: center;
+    font-family: 'Cinzel', serif;
+}
+
+header * {
+    display: inline;
+    color: var(--nav-color);
+}
+
+header li {
+    margin: 2rem;
+}
+
+header li a {
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+#theme-toggle{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--sunmoon-color);
+    transform: rotate(10deg);
+    transition: .75s;
+    cursor: pointer;
+}
+
+#theme-toggle::before{
+    content: "";
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--sunmoon);
+    position: absolute;
+    border-radius: 50%;
+    top: -6px;
+    left: 5px;  
+}
+
+main{
+    padding-top: 2rem;
+}
+
+span{
+    color: white;
+}
+
+input[type="radio"] {
+    background-color: transparent;
+    border: .0625em solid rgba(255,255,255,.5);
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 0 white;
+    cursor: pointer;
+    font: inherit;
+    height: 1em;
+    outline: none;
+    width: 1em;
+    appearance: none;
+    line-height: 1.4;
+    transform: translateY(0.1em);
+  }
+
+  input[type="radio"]:checked {
+    background-color: var(--player-background);
+    box-shadow: inset 0 0 0 .1875em var(--player-background-active);
+    transition: background .15s, box-shadow .5s; 
+    border: none;
+  }

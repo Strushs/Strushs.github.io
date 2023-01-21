@@ -1,0 +1,115 @@
+.game {
+    max-width: 720px;
+    border-radius: 10px;
+    margin: 0 auto;
+    background: var(--blackjack-color);
+    text-align: center;
+    min-height: 430px;
+    font-family: 'Cinzel', serif;
+}
+
+.btn {
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    max-width: 120px;
+    min-width: 50px;
+    font-size: calc(.5rem + .5vw);
+    background: var(--blackjack-button);
+    color: var(--blackjack-button-text) !important;
+    border-radius: 0px;
+}
+
+.btn:hover {
+    background: var(--blackjack-button-hover);
+}
+
+.game h3 {
+    padding: 10px 0;
+    background: var(--blackjack-h3);
+    box-shadow: 0px 0px 20px 0 var(--blackjack-h3);
+    color: white;
+    
+}
+
+.game .game-body {
+    padding: 20px;
+}
+
+.game .game-options {
+    text-align: center;
+}
+.game .card {
+    width: 50px;
+    height: 80px;
+    padding: 10px;
+    background-color: white;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 10pt;
+    text-align: center;
+    margin: 3px;
+    border: solid 1px;
+    color: #000;
+    font-size: 1.5rem;
+}
+
+.game .status {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: none;
+    color: var(--blackjack-status);
+}
+
+.players {
+    max-width: 620px;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.player {
+    width: 40%;
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+    margin: 1%;
+    vertical-align: top;
+    background: var(--player-background);
+    color: #000;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.player.active {
+    background: var(--player-background-active);
+}
+
+.points {
+    text-align: center;
+    font-size: 20pt;
+    font-weight: bold;
+    margin: 10px;
+    font-family: 'Cinzel', serif;
+}
+
+.deck {
+    float: left;
+    background: rgb(255, 255, 255);
+    color: rgb(32, 31, 31);
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px 0 rgb(53, 53, 53);
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 500;
+}
+
+.game-footer{
+    color: var(--game-footer-text);
+    font-size: 10px;
+    user-select: text;
+}

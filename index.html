@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blackjack.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fira+Sans:wght@100;300;500&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <button id="theme-toggle" type="button"> </button>
+        <nav>
+            <ul>
+                <li><h1>BlackJack</h1></li>
+            </ul>
+        </nav>   
+    </header>
+    <main>
+        <div class="game">
+            <div class="game">
+                <h3>Blackjack</h3>
+                
+                <div class="game-body">
+                    <span>Ilość graczy</span>
+                    <br>
+                    <label class="radplay">
+                        <input type="radio" name="playercount" id="2p" value="2" onclick="playersCount = 2;" checked><span>2</span>
+                    
+                    <label class="radplay">
+                        <input type="radio" name="playercount" id="3p" value="3" onclick="playersCount = 3;"><span>3</span>
+                    </label>
+                    <label class="radplay">
+                        <input type="radio" name="playercount" id="4p" value="4" onclick="playersCount = 4;"><span>4</span>
+                    </label>
+                    
+                    <div class="game-options">
+                        <br>
+                        <input type="button" id="btnStart" class="btn" value="Start" onclick="startblackjack()">
+                        <input type="button" class="btn" value="Koniec" onclick="end()">
+                        <input type="button" class="btn" value="Dobierz" onclick="hitMe()">
+                        <input type="button" class="btn" value="Zostań" onclick="stay()">
+                        
+                        
+                    </div>
+                    <div class="status" id="status"></div>
+                    <div id="deck" class="deck">
+                        <div id="deckcount">52</div>
+                    </div>
+                    <br>
+                    <div id="players" class="players"></div>
+                    
+                    <div class="clear"></div>
+                    
+                </div>
+            </div>
+            <div class="game-footer">https://www.thatsoftwaredude.com/content/6417/how-to-code-blackjack-using-javascript</div>
+        </div>
+    </main>
+</body>
+</html>
+<script src="script.js"></script>
+<script src="blackjack.js"></script>
